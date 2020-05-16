@@ -8,16 +8,17 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-animation-component@^5.1.2/dist/aframe-animation-component.min.js"></script>
     <script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
-    <script src="turn-anim.js"></script>
+    <script src="turn-anim2.js"></script>
 
   </head>
 
   <body>
-    <a-scene id="scene" shadow="autoUpdate: false" background="color: #ffffff">
+    <a-scene id="scene" shadow="autoUpdate: false" background="color: #ffffff"
+    animation="property: background.color; to: #000000; dur: 15000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: 0; autoplay: false"  >
 
 <!-- ASSETS  -->
       <a-assets>
-         <video id="greenscreenvideo" src="assets/full_sky.mp4" autoplay="false" loop="true" />
+         <video id="greenscreenvideo" src="assets/full_sky.mp4" autoplay="false" loop preload="auto" />
         <a-mixin id='typeButton' ground geometry='primitive:triangle; height:0.2; width:0.2; depth:0.2' rotation='0 0 -90' scale='0.2 0.2 0.2'></a-mixin>
           <a-asset-item id="5-obj" src="assets/model5b.obj"></a-asset-item>
           <a-asset-item id="5-mtl" src="assets/model5b.mtl"></a-asset-item>
@@ -55,7 +56,9 @@ Livet er blåt,
                                         jeg er mig, åbne mund,
                                             ellipse ved hus så bizar
                                                 o vrede sole o læbe se med.
-        ;" position="3.66 4.59 -2.8" rotation="0 0 0"></a-entity>
+        ;" position="3.66 4.59 -2.8" rotation="0 0 0"
+        animation="property: text.color; to: #fff; dur: 15000; dir: alternate; delay: 5000; easing: easeInOutQuad; loop: 0; autoplay: false"
+        ></a-entity>
 
 
         <a-obj-model material="" src="#5-obj" position="-1.45 0 2.7" scale="0.01 0.01 0.01" color="#000000" mtl="#5-mtl" obj-model=""></a-obj-model>

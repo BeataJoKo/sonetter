@@ -2,17 +2,8 @@
 
         init: function () {
 
-            var theVideo = document.querySelector('#greenscreenvideo');
+        var theVideo = document.querySelector('#greenscreenvideo');
 
-        var COLOR = [
-            "#ffffff",
-            "#000000"
-        ];
-
-        var ReverseCOLOR = [
-            "#000000",
-            "#ffffff"
-        ];
 
         var PRIMITIVE = [
             "plane",
@@ -34,16 +25,17 @@
             "0"
         ];
 
-          var i = 0;
+        var i = 0;
 
             this.el.addEventListener( 'click', function () {
             this.setAttribute( 'geometry', 'primitive', "plane");
             this.setAttribute( 'scale', "0.7 0.7 0.7");
             this.setAttribute( 'position', "-0.965 0.15 4.141");
             theVideo.play();
-            document.getElementById("text").setAttribute('text', 'color', COLOR[ i++ % COLOR.length ]);
             document.getElementById("lamp").setAttribute('light', "intensity", LIGHT[ i++ % LIGHT.length ]);
-            document.getElementById("scene").setAttribute('background', "color", ReverseCOLOR[ i++ % ReverseCOLOR.length ]);
+            document.getElementById("text").setAttribute('animation', 'autoplay', "true");
+            document.getElementById("scene").setAttribute('animation', "autoplay", "true");
+
 
           });
 
