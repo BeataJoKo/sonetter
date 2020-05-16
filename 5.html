@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VR Book by Be Button</title>
+    <meta name="description" content="VR Book; 5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^5.1.2/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
+    <script src="turn-anim.js"></script>
+
+  </head>
+
+  <body>
+    <a-scene id="scene" shadow="autoUpdate: false" background="color: #ffffff">
+
+<!-- ASSETS  -->
+      <a-assets>
+         <video id="greenscreenvideo" src="assets/full_sky.mp4" autoplay="false" loop="true" />
+        <a-mixin id='typeButton' ground geometry='primitive:triangle; height:0.2; width:0.2; depth:0.2' rotation='0 0 -90' scale='0.2 0.2 0.2'></a-mixin>
+          <a-asset-item id="5-obj" src="assets/model5b.obj"></a-asset-item>
+          <a-asset-item id="5-mtl" src="assets/model5b.mtl"></a-asset-item>
+           <a-asset-item id="navn-obj" src="assets/navn.obj"></a-asset-item>
+          <a-asset-item id="navn-mtl" src="assets/navn.mtl"></a-asset-item>
+           <a-asset-item id="elle-obj" src="assets/eller.obj"></a-asset-item>
+          <a-asset-item id="elle-mtl" src="assets/eller.mtl"></a-asset-item>
+           <a-asset-item id="den-obj" src="assets/den.obj"></a-asset-item>
+          <a-asset-item id="den-mtl" src="assets/den.mtl"></a-asset-item>
+           <a-asset-item id="der-obj" src="assets/der.obj"></a-asset-item>
+          <a-asset-item id="der-mtl" src="assets/der.mtl"></a-asset-item>
+           <a-asset-item id="stik-obj" src="assets/stik.obj"></a-asset-item>
+          <a-asset-item id="stik-mtl" src="assets/stik.mtl"></a-asset-item>
+           <a-asset-item id="af-obj" src="assets/af.obj"></a-asset-item>
+          <a-asset-item id="af-mtl" src="assets/af.mtl"></a-asset-item>
+
+        </a-assets>
+
+<!-- Entities go here -->
+
+
+<a-entity id="text" text="font: GARABD.TTF-msdf.json; align: left; width: 9; color: #000; negate:false;
+value:
+
+Livet er blåt,
+    en syngende skygge af oceanet,
+        en spire rede at se og lyde
+            at se, at lyde,
+                reflekser i rejser fra himmel til sø
+                    til vore gnedne øjne.
+
+                            Mit er rødt
+                                viet som lilla af sommernats skær
+                                    ved ruder o triangler spejlet,
+                                        jeg er mig, åbne mund,
+                                            ellipse ved hus så bizar
+                                                o vrede sole o læbe se med.
+        ;" position="3.66 4.59 -2.8" rotation="0 0 0"></a-entity>
+
+
+        <a-obj-model material="" src="#5-obj" position="-1.45 0 2.7" scale="0.01 0.01 0.01" color="#000000" mtl="#5-mtl" obj-model=""></a-obj-model>
+         <a-obj-model material="" src="#navn-obj" position="2.1 -0.125 2.84" scale="0.01 0.01 0.01" color="#000000" mtl="#navn-mtl" obj-model=""></a-obj-model>
+          <a-obj-model material="" src="#elle-obj" position="-0.36 -0.1 1.2" scale="0.0075 0.0075 0.0075" color="#000000" mtl="#elle-mtl" obj-model=""></a-obj-model>
+       <a-obj-model material="" src="#den-obj" position="0.07 0.235 -0.19" scale="0.0075 0.0075 0.0075" color="#000000" mtl="#den-mtl" obj-model=""></a-obj-model>
+        <a-obj-model material="" src="#der-obj" position="0.829 0.124 -0.383" scale="0.0075 0.0075 0.0075" color="#000000" mtl="#der-mtl" obj-model=""></a-obj-model>
+      <a-obj-model material="" src="#stik-obj" position="1.939 0.651 0.21" scale="0.0075 0.0075 0.0075" color="#000000" mtl="#stik-mtl" obj-model=""></a-obj-model>
+        <a-obj-model material="" src="#af-obj" position="3.975 0.905 -0.88" scale="0.0075 0.0075 0.0075" color="#000000" mtl="#af-mtl" obj-model=""></a-obj-model>
+
+
+        <a-plane color="#000000" height="10" width="10" material="opacity: 0.95; transparent: true; metalness: 1; roughness: 0" rotation="-90 180 0" position="0 0 0"></a-plane>
+
+        <a-entity id='swich' class='link' mixin='typeButton' position='-0.935 0.15 4.141' material='color: #9B0000' data-clickable click-change></a-entity>
+
+
+       <a-light type="ambient" color="#d6d6d6"></a-light>
+       <a-light position="5.2 11.82 17.84" type="directional" intensity="1.4" light="intensity: 1.06; castShadow: true"></a-light>
+       <a-light id="lamp" type="point" color="blue" position="-1.27 0.185 5.13" light="intensity: 0 castShadow: true" rotation=""></a-light>
+
+
+  <a-videosphere material="shader: chromakey; src: #greenscreenvideo; color: 0.1 0.9 0.2"></a-videosphere>
+
+
+
+<!-- Camera and Cursor -->
+
+     <a-entity cursor="rayOrigin: mouse; fuse: false;"
+                raycaster="objects: [data-clickable];"></a-entity>
+
+        <a-camera look-controls="" wasd-controls="" position="0 1 5.4" rotation="0 0 0" data-aframe-inspector-original-camera="">
+        </a-camera>
+
+    </a-scene>
+  </body>
+</html>
