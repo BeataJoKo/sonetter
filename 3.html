@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VR Book by Be Button</title>
+    <meta name="description" content="VR Book; 6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^5.1.2/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
+    <script src="main2.js"></script>
+
+  </head>
+
+  <body>
+    <a-scene id="scene" shadow="autoUpdate: false" background="color: #ffffff">
+
+<!-- ASSETS  -->
+      <a-assets>
+
+        <video id="fish" src="assets/blinkB.mp4" autoplay="false" loop muted webkit-playsinline preload="auto" />
+        <a-mixin id='typeButton' ground geometry='primitive:triangle; height:0.2; width:0.2; depth:0.2' rotation='0 0 -90' scale='0.2 0.2 0.2'></a-mixin>
+          <a-asset-item id="3-obj" src="assets/model3.obj"></a-asset-item>
+          <a-asset-item id="3-mtl" src="assets/model3.mtl"></a-asset-item>
+          <a-asset-item id="m-obj" src="assets/mmm.obj"></a-asset-item>
+          <a-asset-item id="m-mtl" src="assets/mmm.mtl"></a-asset-item>
+
+        </a-assets>
+
+<!-- Entities go here -->
+
+
+<a-entity id="text" text="font: GARABD.TTF-msdf.json; align: left; width: 9; color: #000; negate:false;
+value:
+
+Videt hører farvrs spil intelligible
+    at smage på ord og
+    bogstaveligt i øvrigt
+            lad tanken om ordet være kort -
+føl musikken, så
+     bitter/sød med teksturens blødhed,
+          lappende toner med tungen
+              atomerne grundfarver
+                 røde gule blå, i skala
+                    kvarker rytmer grå -
+ lugten gerne mad eller lort
+      hvid god/ond sort, følelser
+            aroma af fristet punani hvor
+  smagen har bid lig duften, lig cymbaler lydende
+      [tcsh ja]   det pink lille kød
+                  juice salt syrlig umami -
+  nogle tænder på hun vil
+   nogle på hun ikke -
+    sensible psyker kilder
+     de dyriske, intime blikke.
+;" position="3.66 4.59 -2.8" rotation="0 0 0"
+></a-entity>
+
+
+        <a-obj-model material="" src="#3-obj" position="3 0 2.7" scale="0.01 0.01 0.01" rotation="0 -50 0" color="#000000" mtl="#3-mtl" obj-model=""></a-obj-model>
+
+        <a-entity
+            id="fish"
+            position="0.917 -0.656 1.42"
+            rotation="0 0 0"
+            material="shader: chromakey; src: #fish; color: 0.1 0.9 0.2"
+            geometry="primitive: box"
+
+              animation__show="property: position; from: 0.917 -0.656 1.42; to: 0.817 0.052 1.420; dur: 5000; delay: 0; easing: easeInOutQuad"
+              animation__reverse="property: position; from: 0.817 0.052 1.420; to: 0.917 -0.656 1.42; dur: 5000; delay: 6000; easing: easeInOutQuad"
+              animation__hop="property: position; from: 0.917 -0.656 1.42; to: -0.75 0.85 1.; dur: 5000; delay: 10000; easing: easeOutQuad"
+              animation__turn="property: rotation; from: 0 0 0; to: 26.358 -46.035 -101.69; dur: 5000; delay: 10000; easing: easeInOutQuad"
+              animation__hide="property: position; from: -0.75 0.85 1; to: -2.723 -0.811 1; dur: 2000; delay: 14000; easing: easeInQuad"
+
+                 ></a-entity>
+
+        <a-entity id="Mgrid">
+        <a-entity class="Mrow">
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-4.252 -0.145 4.5" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -4.252 -0.3 4.4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-3.211 -0.3 4.2" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -3.211 -0.145 4.3; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+       <a-obj-model class="mmm" material="" src="#m-obj" position="-2.252 -0.145 4.5" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -2.252 -0.3 4.4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-1.211 -0.3 4.2" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -1.211 -0.145 4.3; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="0.088 -0.145 4.5" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 0.088 -0.3 4.4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="1.211 -0.3 4.2" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 1.211 -0.145 4.3; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="2.162 -0.145 4.5" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 2.162 -0.3 4.4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="3.211 -0.3 4.2" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 3.211 -0.145 4.3; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="4.252 -0.145 4.5" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 4.252 -0.3 4.4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="-4.252 -0.3 3.9" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -4.252 -0.145 3.8; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-3.211 -0.145 3.6" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -3.211 -0.3 3.7; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+       <a-obj-model class="mmm" material="" src="#m-obj" position="-2.252 -0.3 3.9" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -2.252 -0.145 3.8; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-1.211 -0.145 3.6" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -1.211 -0.3 3.5; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-0.252 -0.3 3.9" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -0.252 -0.145 3.8; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="1.011 -0.145 3.6" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 1.011 -0.3 3.7; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="2.252 -0.3 3.9" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 2.252 -0.145 3.8; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="3.211 -0.145 3.6" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 3.211 -0.3 3.7; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="4.252 -0.3 3.9" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 4.252 -0.145 3.8; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        </a-entity>
+        <a-entity class="Mrow">
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-4.252 -0.3 3.3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -4.252 -0.145 3.2; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-3.211 -0.145 3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -3.211 -0.3 3.1; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+       <a-obj-model class="mmm" material="" src="#m-obj" position="-2.252 -0.3 3.3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -2.252 -0.145 3.2; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-1.211 -0.145 3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -1.211 -0.3 3.1; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-0.032 -0.3 3.3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -0.032 -0.145 3.2; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="1.211 -0.145 3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 1.211 -0.3 3.1; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="2.162 -0.3 3.3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 2.162 -0.145 3.2; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="3.211 -0.145 3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 3.211 -0.3 3.1; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="4.252 -0.3 3.3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 4.252 -0.145 3.2; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="-4.252 -0.145 2.7" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -4.252 -0.3 2.6; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-3.211 -0.3 2.4" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -3.211 -0.145 2.5; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+       <a-obj-model class="mmm" material="" src="#m-obj" position="-2.252 -0.145 2.7" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -2.252 -0.3 2.6; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-1.211 -0.3 2.4" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -1.211 -0.145 2.5; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-0.252 -0.145 2.7" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -0.252 -0.3 2.6; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="1.011 -0.3 2.4" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 1.011 -0.145 2.5; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="2.252 -0.145 2.7" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 2.252 -0.3 2.6; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="3.211 -0.3 2.4" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 3.211 -0.145 2.5; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="4.252 -0.145 2.7" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 4.252 -0.3 2.6; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        </a-entity>
+        <a-entity class="Mrow">
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-4.252 -0.145 2.1" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -4.252 -0.3 2; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-3.211 -0.3 1.8" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -3.211 -0.145 1.9; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+       <a-obj-model class="mmm" material="" src="#m-obj" position="-2.252 -0.145 2.1" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -2.252 -0.3 2; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-1.211 -0.3 1.8" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -1.211 -0.145 1.9; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="0.088 -0.145 2.1" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 0.088 -0.3 2; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="1.211 -0.3 1.8" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 1.211 -0.145 1.9; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="2.162 -0.145 2.1" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 2.162 -0.3 2; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="3.211 -0.3 1.8" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 3.211 -0.145 1.9; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="4.252 -0.145 2.1" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 4.252 -0.3 2; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="-4.252 -0.3 1.5" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -4.252 -0.145 1.4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-3.211 -0.145 1.2" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -3.211 -0.3 1.3; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+       <a-obj-model class="mmm" material="" src="#m-obj" position="-2.252 -0.3 1.5" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -2.252 -0.145 1.4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-1.211 -0.145 1.2" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -1.211 -0.3 1.3; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-0.252 -0.3 1.5" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -0.252 -0.145 1.4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="1.011 -0.145 1.2" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 1.011 -0.3 1.3; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="2.252 -0.3 1.5" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 2.252 -0.145 1.4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="3.211 -0.145 1.2" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 3.211 -0.3 1.3; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="4.252 -0.3 1.5" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 4.252 -0.145 1.4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        </a-entity>
+        <a-entity class="Mrow">
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-4.252 -0.3 0.9" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -4.252 -0.145 0.8; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-3.211 -0.145 0.6" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -3.211 -0.3 0.7; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+       <a-obj-model class="mmm" material="" src="#m-obj" position="-2.252 -0.3 0.9" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -2.252 -0.145 0.8; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-1.211 -0.145 0.6" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -1.211 -0.3 0.7; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-0.032 -0.3 0.9" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -0.032 -0.145 0.8; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="1.211 -0.145 0.6" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 1.211 -0.3 0.7; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="2.162 -0.3 0.9" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 2.162 -0.145 0.8; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="3.211 -0.145 0.6" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 3.211 -0.3 0.7; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="4.252 -0.3 0.9" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 4.252 -0.145 0.8; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="-4.252 -0.145 0.3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -4.252 -0.3 0.2; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-3.211 -0.3 0" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -3.211 -0.145 0.1; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+       <a-obj-model class="mmm" material="" src="#m-obj" position="-2.252 -0.145 0.3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -2.252 -0.3 0.2; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-1.211 -0.3 0" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -1.211 -0.145 0.1; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-0.252 -0.145 0.3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -0.252 -0.3 0.2; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="1.011 -0.3 0" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 1.011 -0.145 0.1; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="2.252 -0.145 0.3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 2.252 -0.3 0.2; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="3.211 -0.3 0" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 3.211 -0.145 0.1; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="4.252 -0.145 0.3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 4.252 -0.3 0.2; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        </a-entity>
+        <a-entity class="Mrow">
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-4.252 -0.145 -0.3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -4.252 -0.3 -0.4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-3.211 -0.3 -0.6" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -3.211 -0.145 -0.5; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+       <a-obj-model class="mmm" material="" src="#m-obj" position="-2.252 -0.145 -0.3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -2.252 -0.3 -0.4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-1.211 -0.3 -0.6" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -1.211 -0.145 -0.5; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="0.088 -0.145 -0.3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 0.088 -0.3 -0.4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="1.211 -0.3 -0.6" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 1.211 -0.145 -0.5; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="2.162 -0.145 -0.3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 2.162 -0.3 -0.4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="3.211 -0.3 -0.6" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 3.211 -0.145 -0.5; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="4.252 -0.145 -0.3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 4.252 -0.3 -0.4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="-4.252 -0.3 -0.9" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -4.252 -0.145 -1; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-3.211 -0.145 -1.2" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -3.211 -0.3 -1.1; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+       <a-obj-model class="mmm" material="" src="#m-obj" position="-2.252 -0.3 -0.9" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -2.252 -0.145 -1; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-1.211 -0.145 -1.2" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -1.211 -0.3 -1.1; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-0.252 -0.3 -0.9" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -0.252 -0.145 -1; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="1.011 -0.145 -1.2" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 1.011 -0.3 -1.1; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="2.252 -0.3 -0.9" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 2.252 -0.145 -1; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="3.211 -0.145 -1.2" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 3.211 -0.3 -1.1; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="4.252 -0.3 -0.9" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 4.252 -0.145 -1; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        </a-entity>
+        <a-entity class="Mrow">
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-4.252 -0.3 -1.5" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -4.252 -0.145 -1.6; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-3.211 -0.145 -1.8" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -3.211 -0.3 -1.7; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+       <a-obj-model class="mmm" material="" src="#m-obj" position="-2.252 -0.3 -1.5" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -2.252 -0.145 -1.6; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-1.211 -0.145 -1.8" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -1.211 -0.3 -1.7; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-0.032 -0.3 -1.5" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -0.032 -0.145 -1.6; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="1.211 -0.145 -1.8" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 1.211 -0.3 -1.7; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="2.162 -0.3 -1.5" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 2.162 -0.145 -1.6; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="3.211 -0.145 -1.8" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 3.211 -0.3 -1.7; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="4.252 -0.3 -1.5" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 4.252 -0.145 -1.6; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="-4.252 -0.145 -2.1" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -4.252 -0.3 -2.2; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-3.211 -0.3 -2.4" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -3.211 -0.145 -2.3; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+       <a-obj-model class="mmm" material="" src="#m-obj" position="-2.252 -0.145 -2.1" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -2.252 -0.3 -2.2; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-1.211 -0.3 -2.4" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -1.211 -0.145 -2.3; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-0.252 -0.145 -2.1" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -0.252 -0.3 -2.2; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="1.011 -0.3 -2.4" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 1.011 -0.145 -2.3; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="2.252 -0.145 -2.1" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 2.252 -0.3 -2.2; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="3.211 -0.3 -2.4" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 3.211 -0.145 -2.3; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="4.252 -0.145 -2.1" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 4.252 -0.3 -2.2; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        </a-entity>
+         <a-entity class="Mrow">
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-4.252 -0.145 -2.7" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -4.252 -0.3 -2.8; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-3.211 -0.3 -3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -3.211 -0.145 -2.9; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+       <a-obj-model class="mmm" material="" src="#m-obj" position="-2.252 -0.145 -2.7" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -2.252 -0.3 -2.8; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-1.211 -0.3 -3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -1.211 -0.145 -2.9; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="0.088 -0.145 -2.7" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 0.088 -0.3 -2.8; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="1.211 -0.3 -3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 1.211 -0.145 -2.9; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="2.162 -0.145 -2.7" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 2.162 -0.3 -2.8; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="3.211 -0.3 -3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 3.211 -0.145 -2.9; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="4.252 -0.145 -2.7" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 4.252 -0.3 -2.8; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="-4.252 -0.3 -3.3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -4.252 -0.145 -3.4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-3.211 -0.145 -3.6" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -3.211 -0.3 -3.5; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+       <a-obj-model class="mmm" material="" src="#m-obj" position="-2.252 -0.3 -3.3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -2.252 -0.145 -3.4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-1.211 -0.145 -3.6" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -1.211 -0.3 -3.5; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-0.252 -0.3 -3.3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -0.252 -0.145 -3.4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="1.011 -0.145 -3.6" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 1.011 -0.3 -3.5; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="2.252 -0.3 -3.3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 2.252 -0.145 -3.4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="3.211 -0.145 -3.6" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 3.211 -0.3 -3.5; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="4.252 -0.3 -3.3" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 4.252 -0.145 -3.4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        </a-entity>
+        <a-entity class="Mrow">
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-4.252 -0.3 -3.9" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -4.252 -0.145 -4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-3.211 -0.145 -4.2" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -3.211 -0.3 -4.1; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+       <a-obj-model class="mmm" material="" src="#m-obj" position="-2.252 -0.3 -3.9" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -2.252 -0.145 -4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-1.211 -0.145 -4.2" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -1.211 -0.3 -4.1; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-0.032 -0.3 -3.9" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -0.032 -0.145 -4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="1.211 -0.145 -4.2" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 1.211 -0.3 -4.1; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="2.162 -0.3 -3.9" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 2.162 -0.145 -4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="3.211 -0.145 -4.2" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 3.211 -0.3 -4.1; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="4.252 -0.3 -3.9" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 4.252 -0.145 -4; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="-4.252 -0.145 -4.5" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -4.252 -0.3 -4.6; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-3.211 -0.3 -4.8" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -3.211 -0.145 -4.7; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+       <a-obj-model class="mmm" material="" src="#m-obj" position="-2.252 -0.145 -4.5" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -2.252 -0.3 -4.6; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-1.211 -0.3 -4.8" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -1.211 -0.145 -4.7; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="-0.252 -0.145 -4.5" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: -0.252 -0.3 -4.6; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="1.011 -0.3 -4.8" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 1.011 -0.145 -4.7; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="2.252 -0.145 -4.5" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 2.252 -0.3 -4.6; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        <a-obj-model class="mmm" material="" src="#m-obj" position="3.211 -0.3 -4.8" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 3.211 -0.145 -4.7; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+         <a-obj-model class="mmm" material="" src="#m-obj" position="4.252 -0.145 -4.5" scale="0.0075 0.0075 0.005" color="#000000" mtl="#m-mtl" obj-model=""
+        animation="property: position; to: 4.252 -0.3 -4.8; dur: 5000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true"
+        ></a-obj-model>
+        </a-entity>
+        </a-entity>
+
+        <a-plane color="#ffffff" height="10" width="10" rotation="-90 180 0" position="0 0 0"></a-plane>
+
+        <a-entity id='swich' class='link' mixin='typeButton' position='-0.935 0.15 4.141' material='color: #9B0000' data-clickable click-change></a-entity>
+
+
+       <a-light type="ambient" color="#d6d6d6"></a-light>
+       <a-light position="5.2 11.82 17.84" type="directional" intensity="1.4" light="intensity: 1.06; castShadow: true"></a-light>
+       <a-light id="lamp" type="point" color="blue" position="-1.27 0.185 5.13" light="intensity: 0 castShadow: true" rotation=""></a-light>
+
+
+
+
+
+
+<!-- Camera and Cursor -->
+
+     <a-entity cursor="rayOrigin: mouse; fuse: false;"
+                raycaster="objects: [data-clickable];"></a-entity>
+
+        <a-camera look-controls="" wasd-controls="" position="0 1 5.4" rotation="0 0 0" data-aframe-inspector-original-camera="">
+        </a-camera>
+
+    </a-scene>
+  </body>
+</html>
