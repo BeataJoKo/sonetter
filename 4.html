@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VR Book by Be Button</title>
+    <meta name="description" content="VR Book; 4">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^5.1.2/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-sprite-particles-component@^0.5.0/aframe-sprite-particles-component.js"></script>
+    <script src="page4.js"></script>
+
+  </head>
+
+  <body>
+     <a-scene id="scene" shadow="autoUpdate: false" background="color: #ffffff">
+
+<!-- ASSETS  -->
+      <a-assets>
+        <audio id="Sune" preload="auto" src="assets/Indsigt1.mp3" autoplay="false"></audio>
+        <a-mixin id='typeButton' ground geometry='primitive:triangle; height:0.2; width:0.2; depth:0.2' rotation='0 0 -90' scale='0.2 0.2 0.2'></a-mixin>
+          <a-asset-item id="4-obj" src="assets/model4.obj"></a-asset-item>
+          <a-asset-item id="4-mtl" src="assets/model4.mtl"></a-asset-item>
+           <a-asset-item id="indsigt-obj" src="assets/indsigt.obj"></a-asset-item>
+          <a-asset-item id="indsigt-mtl" src="assets/indsigt.mtl"></a-asset-item>
+           <a-asset-item id="i-obj" src="assets/i.obj"></a-asset-item>
+          <a-asset-item id="i-mtl" src="assets/i.mtl"></a-asset-item>
+           <a-asset-item id="det-obj" src="assets/det.obj"></a-asset-item>
+          <a-asset-item id="det-mtl" src="assets/det.mtl"></a-asset-item>
+           <a-asset-item id="der_4-obj" src="assets/der_4.obj"></a-asset-item>
+          <a-asset-item id="der_4-mtl" src="assets/der_4.mtl"></a-asset-item>
+           <a-asset-item id="er-obj" src="assets/er.obj"></a-asset-item>
+          <a-asset-item id="er-mtl" src="assets/er.mtl"></a-asset-item>
+           <a-asset-item id="dejli-obj" src="assets/dejli.obj"></a-asset-item>
+          <a-asset-item id="dejli-mtl" src="assets/dejli.mtl"></a-asset-item>
+
+        </a-assets>
+
+<!-- Entities go here -->
+
+
+         <a-entity sprite-particles="texture: assets/blob.png; lifeTime: 1..4; spawnRate: 8000; opacity: 0,1,1,0; radialType: sphere; radialPosition: 1; scale: .2,.1,.1,.1,.1; emitterColor: #000000; color: black" position="0 3.5 0" scale="3 3 3">
+         </a-entity>
+
+
+        <a-obj-model material="" src="#4-obj" position="2.714 0 2.042" scale="0.01 0.01 0.01" color="#000000" mtl="#4-mtl" obj-model=""></a-obj-model>
+        <a-entity position="0.756 0 0">
+        <a-obj-model material="" src="#indsigt-obj" position="-3.555 -0.523 1.391" rotation="-90 0 0" scale="0.01 0.01 0.01" color="#000000" mtl="#indsigt-mtl" obj-model=""></a-obj-model>
+        <a-obj-model material="" src="#i-obj" position="-3.297 -0.011 1.887" rotation="-90 0 0" scale="0.0075 0.0075 0.0075" color="#000000" mtl="#i-mtl" obj-model=""></a-obj-model>
+        <a-obj-model material="" src="#det-obj" position="-2.743 -0.255 1.889" rotation="-90 0 0" scale="0.0075 0.0075 0.0075" color="#000000" mtl="#det-mtl" obj-model=""></a-obj-model>
+        <a-obj-model material="" src="#der_4-obj" position="-3.775 -0.257 2.424" rotation="-90 0 0" scale="0.0075 0.0075 0.0075" color="#000000" mtl="#der_4-mtl" obj-model=""></a-obj-model>
+        <a-obj-model material="" src="#er-obj" position="-2.633 -0.134 2.447" rotation="-90 0 0" scale="0.0075 0.0075 0.0075" color="#000000" mtl="#er-mtl" obj-model=""></a-obj-model>
+        <a-obj-model material="" src="#dejli-obj" position="-2.832 -0.677 3.142" rotation="-90 0 0" scale="0.0075 0.0075 0.0075" color="#000000" mtl="#dejli-mtl" obj-model=""></a-obj-model>
+        </a-entity>
+
+        <a-plane color="#ffffff" height="10" width="10" rotation="-90 180 0" position="0 0 0"></a-plane>
+
+        <a-entity id='play' class='link' mixin='typeButton' position='-0.935 0.15 4.141' material='color: #9B0000' data-clickable audiohandler></a-entity>
+
+
+       <a-light type="ambient" color="#d6d6d6"></a-light>
+       <a-light position="5.2 11.82 17.84" type="directional" intensity="1.4" light="intensity: 1.06; castShadow: true"></a-light>
+       <a-light id="lamp" type="point" color="blue" position="-1.27 0.185 5.13" light="intensity: 0 castShadow: true" rotation=""></a-light>
+
+
+
+<!-- Camera and Cursor -->
+
+     <a-entity cursor="rayOrigin: mouse; fuse: false;"
+                raycaster="objects: [data-clickable];"></a-entity>
+
+        <a-camera look-controls="" wasd-controls="" position="0 1 5.4" rotation="0 0 0" data-aframe-inspector-original-camera="">
+        </a-camera>
+
+    </a-scene>
+  </body>
+</html>

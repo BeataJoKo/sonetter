@@ -3,27 +3,6 @@
 init: function () {
 
 //    document.getElementById("lamp").setAttribute('light', "intensity", "3");
- /*
- 1:Videt hører farvers spil intelligible
- 2:    at smage på ord og
-     bogstaveligt i øvrigt
- 3:           lad tanken om ordet være kort -
- 4:føl musikken, så
- 5:     bitter/sød med teksturens blødhed,
- 6:          lappende toner med tungen
- 7:              atomerne grundfarver
- 8:                 røde gule blå, i skala
- 9:                    kvarker rytmer grå -
-10:lugten gerne mad eller lort
-11:      hvid god/ond sort, følelser
-12:            aroma af fristet punani hvor
-13:  smagen har bid lig duften, lig cymbaler lydende
-14:      [tcsh ja]   det pink lille kød
-15:                  juice salt syrlig umami -
-16:  nogle tænder på hun vil
-17:   nogle på hun ikke -
-18:    sensible psyker kilder
-19:     de dyriske, intime blikke.*/
 
      var theVideo = document.querySelector('#fish');
 
