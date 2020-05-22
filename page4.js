@@ -2,19 +2,35 @@
 
         init: function () {
 
-        var theAudio = document.querySelector('#Sune');
+        var theAudio = document.querySelector('[sound]');
+        var Pause = document.querySelector('#pause');
+        var Stop = document.querySelector('#stop');
+        var Play = document.querySelector('#play');
 
             this.el.addEventListener( 'click', function () {
-            this.setAttribute( 'geometry', 'primitive', "plane");
-            this.setAttribute( 'scale', "0.7 0.7 0.7");
-            this.setAttribute( 'position', "-0.965 0.15 4.141");
-            theAudio.play();
-
-            document.getElementById("lamp").setAttribute('light', "intensity", "3");
-
-
+            theAudio.components.sound.playSound();
+            Play.setAttribute('visible', "false");
+            Play.setAttribute('scale', "0 0");
+            Pause.setAttribute('visible', "true");
+            Pause.setAttribute('scale', "0.8 0.8");
+            Stop.setAttribute('visible', "true");
           });
 
+            Pause.addEventListener( 'click', function () {
+            theAudio.components.sound.pauseSound();
+            Pause.setAttribute('visible', "false");
+            Pause.setAttribute('scale', "0 0");
+            Play.setAttribute('visible', "true");
+            Play.setAttribute('scale', "0.2 0.2");
+        });
+
+            Stop.addEventListener( 'click', function () {
+            theAudio.components.sound.stopSound();
+            Stop.setAttribute('visible', "false");
+            Pause.setAttribute('visible', "false");
+            Play.setAttribute('visible', "true");
+            Play.setAttribute('scale', "0.2 0.2");
+        });
         }
 
       });
