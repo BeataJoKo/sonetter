@@ -1,22 +1,22 @@
- AFRAME.registerComponent('cursor-animator', {
+AFRAME.registerComponent('cursor-animator', {
 
 init: function () {
 
-//    document.getElementById("lamp").setAttribute('light', "intensity", "3");
-
      var theVideo = document.querySelector('#fish');
+     var On = document.querySelector('#on');
+     var Off = document.querySelector('#off');
 
             this.el.addEventListener( 'click', function () {
-            this.setAttribute( 'geometry', 'primitive', "plane");
-            this.setAttribute( 'scale', "0.7 0.7 0.7");
-            this.setAttribute( 'position', "-1.15 0.15 4.141");
+            this.setAttribute('visible', "false");
+            this.setAttribute('scale', "0 0");
+            Off.setAttribute('visible', "true");
+            Off.setAttribute('scale', "0.8 0.8");
             theVideo.play();
 
          document.getElementById("ryba").setAttribute('animation__reverse', "autoplay", "true");
          document.getElementById("ryba").setAttribute('animation__hop', "autoplay", "true");
          document.getElementById("ryba").setAttribute('animation__turn', "autoplay", "true");
          document.getElementById("ryba").setAttribute('animation__hide', "autoplay", "true");
-         document.getElementById("ryba").setAttribute('animation__show', "loop", "false");
 
          document.getElementById("type-1").setAttribute('animation__1', "autoplay", "true");
          document.getElementById("type-2").setAttribute('animation__2', "autoplay", "true");
@@ -56,9 +56,14 @@ init: function () {
          document.getElementById("type-17").setAttribute('animation__36', "autoplay", "true"); document.getElementById("type-18").setAttribute('animation__37', "autoplay", "true");
          document.getElementById("type-19").setAttribute('animation__38', "autoplay", "true");
 
-         document.getElementById("ryba").setAttribute('animation__show', "loop", "true");
           });
 
+
+    Off.addEventListener( 'click', function () {
+            theVideo.pause();
+            theVideo.currentTime = 0;
+
+        });
  }
 
       });

@@ -3,41 +3,33 @@
         init: function () {
 
         var theVideo = document.querySelector('#greenscreenvideo');
-
-
-        var PRIMITIVE = [
-            "plane",
-            "triangle"
-        ];
-
-        var SCALE = [
-            "0.7 0.7 0.7",
-            "0.2 0.2 0.2"
-        ];
-
-        var POSITION = [
-            "-0.965 0.15 4.141",
-            "-0.935 0.15 4.141"
-        ];
-
-        var LIGHT = [
-            "3.48",
-            "0"
-        ];
-
-        var i = 0;
+        var On = document.querySelector('#swich-on');
+        var Off = document.querySelector('#swich-off');
 
             this.el.addEventListener( 'click', function () {
-            this.setAttribute( 'geometry', 'primitive', "plane");
-            this.setAttribute( 'scale', "0.7 0.7 0.7");
-            this.setAttribute( 'position', "-0.965 0.15 4.141");
             theVideo.play();
-            document.getElementById("lamp").setAttribute('light', "intensity", LIGHT[ i++ % LIGHT.length ]);
-            document.getElementById("text").setAttribute('animation', 'autoplay', "true");
-            document.getElementById("scene").setAttribute('animation', "autoplay", "true");
+            this.setAttribute('visible', "false");
+            this.setAttribute('scale', "0 0");
+            Off.setAttribute('visible', "true");
+            Off.setAttribute('scale', "0.8 0.8");
+            document.getElementById("lamp").setAttribute('light', "intensity", "3.48");
+            document.getElementById("scene").emit("background.color-start");
+            document.getElementById("text").emit("text.color-start");
+            });
 
-
-          });
+            Off.addEventListener( 'click', function () {
+            theVideo.pause();
+            theVideo.currentTime = 3;
+            Off.setAttribute('visible', "false");
+            Off.setAttribute('scale', "0 0");
+            On.setAttribute('visible', "true");
+            On.setAttribute('scale', "0.2 0.2");
+            document.getElementById("lamp").setAttribute('light', "intensity", "0");
+            document.getElementById("scene").emit("background.color-pause");
+            document.getElementById("scene").setAttribute("background", "color", "#ffffff");
+            document.getElementById("text").emit("text.color-pause");
+            document.getElementById("text").setAttribute("text", "color", "#000000");
+        });
 
         }
 

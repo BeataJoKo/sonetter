@@ -14,12 +14,14 @@
 
   <body>
     <a-scene id="scene" shadow="autoUpdate: false" background="color: #ffffff"
-    animation="property: background.color; to: #000000; dur: 15000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: 0; autoplay: false"  >
+    animation="property: background.color; from: #ffffff; to: #000000; dur: 15000; dir: alternate; delay: 0; easing: easeInOutQuad; loop: true;
+                  startEvents: background.color-start;
+                  pauseEvents: background.color-pause">
 
 <!-- ASSETS  -->
       <a-assets>
-         <video id="greenscreenvideo" src="assets/full_skyA.mp4" autoplay="false" loop webkit-playsinline preload="auto" muted />
-        <a-mixin id='typeButton' ground geometry='primitive:triangle; height:0.2; width:0.2; depth:0.2' rotation='0 0 -90' scale='0.2 0.2 0.2'></a-mixin>
+         <video id="greenscreenvideo" src="assets/full_skyA.mp4" autoplay="false" loop webkit-playsinline preload="auto"/>
+        <a-mixin id='typeButton' ground geometry='primitive:triangle; height:0.2; width:0.2' rotation='0 0 -90' scale='0.2 0.2'></a-mixin>
           <a-asset-item id="5-obj" src="assets/model5b.obj"></a-asset-item>
           <a-asset-item id="5-mtl" src="assets/model5b.mtl"></a-asset-item>
            <a-asset-item id="navn-obj" src="assets/navn.obj"></a-asset-item>
@@ -56,8 +58,9 @@ Livet er blåt,
                                             ellipse ved hus så bizar
                                                 o vrede sole o læbe se med.
         ;" position="3.66 4.59 -2.8" rotation="0 0 0"
-        animation="property: text.color; to: #fff; dur: 15000; dir: alternate; delay: 5000; easing: easeInOutQuad; loop: 0; autoplay: false"
-        ></a-entity>
+        animation="property: text.color; from: #000; to: #fff; dur: 15000; dir: alternate; delay: 5000; easing: easeInOutQuad; loop: true;
+                  startEvents: text.color-start;
+                  pauseEvents: text.color-pause"></a-entity>
 
 
         <a-obj-model material="" src="#5-obj" position="-1.45 0 2.7" scale="0.01 0.01 0.01" color="#000000" mtl="#5-mtl" obj-model=""></a-obj-model>
@@ -71,8 +74,8 @@ Livet er blåt,
 
         <a-plane color="#000000" height="10" width="10" material="opacity: 0.95; transparent: true; metalness: 1; roughness: 0" rotation="-90 180 0" position="0 0 0"></a-plane>
 
-        <a-entity id='swich' class='link' mixin='typeButton' position='-0.935 0.15 4.141' material='color: #9B0000' data-clickable click-change></a-entity>
-
+        <a-entity id='swich-on' class='link' mixin='typeButton' position='-0.935 0.15 4.141' material='color: #9B0000' data-clickable click-change></a-entity>
+        <a-entity id='swich-off' class='link' geometry='primitive:plane; height:0.2; width:0.2' rotation='0 0 -90' scale='0 0' position='-0.965 0.15 4.141' material='color: #9B0000' visible="false" data-clickable></a-entity>
 
        <a-light type="ambient" color="#d6d6d6"></a-light>
        <a-light position="5.2 11.82 17.84" type="directional" intensity="1.4" light="intensity: 1.06; castShadow: true"></a-light>
