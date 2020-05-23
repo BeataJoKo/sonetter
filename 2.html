@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VR Book by Be Button</title>
+    <meta name="description" content="VR Book; 2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^5.1.2/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
+    <script src="https://unpkg.com/aframe-sprite-particles-component@^0.5.0/aframe-sprite-particles-component.js"></script>
+    <script src="page2.js"></script>
+
+  </head>
+
+  <body>
+    <a-scene id="scene" shadow="autoUpdate: false" background="color: #ffffff">
+
+<!-- ASSETS  -->
+      <a-assets>
+
+        <video id="raven" src="assets/raven.mp4" autoplay="false" loop muted webkit-playsinline preload="auto" />
+        <a-mixin id='typeButton' ground geometry='primitive:triangle; height:0.2; width:0.2' rotation='0 0 -90' scale='0.2 0.2'></a-mixin>
+          <a-asset-item id="2-obj" src="assets/model2.obj"></a-asset-item>
+          <a-asset-item id="2-mtl" src="assets/model2.mtl"></a-asset-item>
+          <a-asset-item id="spejl-obj" src="assets/spejl.obj"></a-asset-item>
+          <a-asset-item id="spejl-mtl" src="assets/spejl.mtl"></a-asset-item>
+          <a-asset-item id="spejl2-obj" src="assets/spejling.obj"></a-asset-item>
+          <a-asset-item id="spejl2-mtl" src="assets/spejling.mtl"></a-asset-item>
+          <img id="skrach" src="assets/skrach-infin-bright.jpg">
+          <img id="tree1" src="assets/drawww-02.png">
+          <img id="tree2" src="assets/drawww-03.png">
+
+        </a-assets>
+
+<!-- Entities go here -->
+
+<a-entity id="full-text" position="1 2.45 -2.4">
+<a-entity id="type1" class="full-text" text="font: GARABD3.TTF-msdf.json; align: left; width: 9; color: #000; negate:false;
+value:
+Skeens
+;" position="1.066 6.28 -2.8" rotation="0 0 0" visible="false"
+animation__in="property: visible; from: false; to: true; dur: 2000; delay: 0; easing: easeOutQuad; autoplay: false"
+animation__turn="property: rotation; from: 0 0 0; to: -31.863 17,463 13.947; dur: 1000; delay: 14000; autoplay: false"
+animation__fall="property: position; from: 1.066 6.28 -2.8; to: 1.283 -1.021 -2.8; dur: 1000; delay: 14000; autoplay: false"
+></a-entity>
+<a-entity id="type2" class="full-text" text="font: GARABD3.TTF-msdf.json; align: left; width: 9; color: #000; negate:false;
+value:
+omvendte
+;" position="2.675 6.28 -2.8" rotation="0 0 0" visible="false"
+animation__in="property: visible; from: false; to: true; dur: 2000; delay: 0; easing: easeOutQuad; autoplay: false"
+animation__turn="property: rotation; from: 0 0 0; to: 58.278 0 0; dur: 1000; delay: 14000; autoplay: false"
+animation__fall="property: position; from: 2.675 6.28 -2.8; to: 2.675 -1.966 -.0789; dur: 1000; delay: 14000; autoplay: false"></a-entity>
+<a-entity id="type3" class="full-text" text="font: GARABD3.TTF-msdf.json; align: left; width: 9; color: #000; negate:false;
+value:
+spejl
+;" position="4.909 6.28 -2.8" rotation="0 0 0" visible="false"
+animation__in="property: visible; from: false; to: true; dur: 2000; delay: 0; easing: easeOutQuad; autoplay: false"
+></a-entity>
+<a-entity id="type4" class="full-text" text="font: GARABD3.TTF-msdf.json; align: left; width: 9; color: #000; negate:false;
+value:
+fra
+;" position="1.066 5.68 -2.8" rotation="0 0 0" visible="false"
+animation__in="property: visible; from: false; to: true; dur: 2000; delay: 0; easing: easeOutQuad; autoplay: false"
+animation__turn="property: rotation; from: 0 0 0; to: 0 0 -13.82; dur: 1000; delay: 14000; autoplay: false"
+animation__fall="property: position; from: 1.066 5.68 -2.8; to: 1.066 -2.8 -1.44; dur: 1000; delay: 14000; autoplay: false"></a-entity>
+<a-entity id="type5" class="full-text" text="font: GARABD3.TTF-msdf.json; align: left; width: 9; color: #000; negate:false;
+value:
+elskere
+;" position="1.066 5.08 -2.8" rotation="0 0 0" visible="false"
+animation__in="property: visible; from: false; to: true; dur: 2000; delay: 0; easing: easeOutQuad; autoplay: false"
+animation__turn="property: rotation; from: 0 0 0; to: -23.366 0 0; dur: 1000; delay: 14000; autoplay: false"
+animation__fall="property: position; from: 1.066 5.08 -2.8; to: 1.066 -1.861 1.458; dur: 1000; delay: 14000; autoplay: false"></a-entity>
+<a-entity id="type6" class="full-text" text="font: GARABD3.TTF-msdf.json; align: left; width: 9; color: #000; negate:false;
+value:
+i ske
+;" position="2.674 5.08 -2.8" rotation="0 0 0" visible="false"
+animation__in="property: visible; from: false; to: true; dur: 2000; delay: 0; easing: easeOutQuad; autoplay: false"
+animation__fall="property: position; from: 2.674 5.08 -2.8; to: 2.674 -1.912 2.152; dur: 1000; delay: 14000; autoplay: false"></a-entity>
+<a-entity id="type7" class="full-text" text="font: GARABD3.TTF-msdf.json; align: left; width: 9; color: #000; negate:false;
+value:
+til
+;" position="3.8 5.08 -2.8" rotation="0 0 0" visible="false"
+animation__in="property: visible; from: false; to: true; dur: 2000; delay: 0; easing: easeOutQuad; autoplay: false"
+animation__turn="property: rotation; from: 0 0 0; to: 0 0 33.118; dur: 1000; delay: 14000; autoplay: false"
+animation__fall="property: position; from: 3.8 5.08 -2.8; to: 3.8 0.462 -2.8; dur: 1000; delay: 14000; autoplay: false"></a-entity>
+<a-entity id="type8" class="full-text" text="font: GARABD3.TTF-msdf.json; align: left; width: 9; color: #000; negate:false;
+value:
+ordspil
+;" position="1.066 4.48 -2.8" rotation="0 0 0" visible="false"
+animation__in="property: visible; from: false; to: true; dur: 2000; delay: 0; easing: easeOutQuad; autoplay: false"
+animation__turn="property: rotation; from: 0 0 0; to: 0 0 -33.311; dur: 1000; delay: 14000; autoplay: false"
+animation__fall="property: position; from: 1.066 4.48 -2.8; to: 2.61 -4.037 -2.8; dur: 1000; delay: 14000; autoplay: false"></a-entity>
+<a-entity id="type9" class="full-text" text="font: GARABD3.TTF-msdf.json; align: left; width: 9; color: #000; negate:false;
+value:
+i hænder,
+;" position="2.674 4.48 -2.8" rotation="0 0 0" visible="false"
+animation__in="property: visible; from: false; to: true; dur: 2000; delay: 0; easing: easeOutQuad; autoplay: false"
+animation__turn="property: rotation; from: 0 0 0; to: 64.346 61.052 45.148; dur: 1000; delay: 14000; autoplay: false"
+animation__fall="property: position; from: 2.674 4.48 -2.8; to: 2.674 -0.568 -2.8; dur: 1000; delay: 14000; autoplay: false"></a-entity>
+<a-entity id="type10" class="full-text" text="font: GARABD3.TTF-msdf.json; align: left; width: 9; color: #000; negate:false;
+value:
+stød i
+;" position="1.066 3.88 -2.8" rotation="0 0 0" visible="false"
+animation__in="property: visible; from: false; to: true; dur: 2000; delay: 0; easing: easeOutQuad; autoplay: false"
+animation__turn="property: rotation; from: 0 0 0; to: 64.346 61.052 45.148; dur: 1000; delay: 14000; autoplay: false"
+animation__fall="property: position; from: 1.066 3.88 -2.8; to: 2.674 -0.568 -2.8; dur: 1000; delay: 14000; autoplay: false"></a-entity>
+<a-entity id="type11" class="full-text" text="font: GARABD3.TTF-msdf.json; align: left; width: 9; color: #000; negate:false;
+value:
+modersmålet, -
+;" position="2.403 3.88 -2.8" rotation="0 0 0" visible="false"
+animation__in="property: visible; from: false; to: true; dur: 2000; delay: 0; easing: easeOutQuad; autoplay: false"
+animation__turn="property: rotation; from: 0 0 0; to: 59.073 44.678 0; dur: 1000; delay: 14000; autoplay: false"
+animation__fall="property: position; from: 2.403 3.88 -2.8; to: 1.575 -1.847 -1.342; dur: 1000; delay: 14000; autoplay: false"></a-entity>
+<a-entity id="type12" class="full-text" text="font: GARABD3.TTF-msdf.json; align: left; width: 9; color: #000; negate:false;
+value:
+kroppe
+;" position="1.066 3.28 -2.8" rotation="0 0 0" visible="false"
+animation__in="property: visible; from: false; to: true; dur: 2000; delay: 0; easing: easeOutQuad; autoplay: false"
+animation__turn="property: rotation; from: 0 0 0; to: 0 0 16.114; dur: 1000; delay: 14000; autoplay: false"
+animation__fall="property: position; from: 1.066 3.28 -2.8; to: 2.637 -0.681 0.135; dur: 1000; delay: 14000; autoplay: false"></a-entity>
+<a-entity id="type13" class="full-text" text="font: GARABD3.TTF-msdf.json; align: left; width: 9; color: #000; negate:false;
+value:
+nye nære
+;" position="1.066 2.68 -2.8" rotation="0 0 0" visible="false"
+animation__in="property: visible; from: false; to: true; dur: 2000; delay: 0; easing: easeOutQuad; autoplay: false"
+animation__turn="property: rotation; from: 0 0 0; to: 0 0 -37.525; dur: 1000; delay: 14000; autoplay: false"
+animation__fall="property: position; from: 1.066 2.68 -2.8; to: 0.23 -3.838 -0.964; dur: 1000; delay: 14000; autoplay: false"></a-entity>
+<a-entity id="type14" class="full-text" text="font: GARABD3.TTF-msdf.json; align: left; width: 9; color: #000; negate:false;
+value:
+venner
+;" position="3.116 2.68 -2.8" rotation="0 0 0" visible="false"
+animation__in="property: visible; from: false; to: true; dur: 2000; delay: 0; easing: easeOutQuad; autoplay: false"
+animation__turn="property: rotation; from: 0 0 0; to: 64.124 0 0; dur: 1000; delay: 16000; autoplay: false"
+animation__fall="property: position; from: 3.116 2.68 -2.8; to: 3.116 -1.367 -2.6; dur: 1000; delay: 16000; autoplay: false"></a-entity>
+<a-entity id="type15" class="full-text" text="font: GARABD3.TTF-msdf.json; align: left; width: 9; color: #000; negate:false;
+value:
+pager
+;" position="1.066 2.08 -2.8" rotation="0 0 0" visible="false"
+animation__in="property: visible; from: false; to: true; dur: 2000; delay: 0; easing: easeOutQuad; autoplay: false"
+animation__turn="property: rotation; from: 0 0 0; to: 36.991 0 0; dur: 1000; delay: 14000; autoplay: false"
+animation__fall="property: position; from: 1.066 2.08 -2.8; to: 2.153 -1.734 1.457; dur: 1000; delay: 14000; autoplay: false"></a-entity>
+<a-entity id="type16" class="full-text" text="font: GARABD3.TTF-msdf.json; align: left; width: 9; color: #000; negate:false;
+value:
+ud i et
+;" position="2.426 2.08 -2.8" rotation="0 0 0" visible="false"
+animation__in="property: visible; from: false; to: true; dur: 2000; delay: 0; easing: easeOutQuad; autoplay: false"
+animation__turn="property: rotation; from: 0 0 0; to: 0 0 36.893; dur: 1000; delay: 14000; autoplay: false"
+animation__fall="property: position; from: 2.426 2.08 -2.8; to: 2.426 0.634 -1.123; dur: 1000; delay: 14000; autoplay: false"></a-entity>
+<a-entity id="type17" class="full-text" text="font: GARABD3.TTF-msdf.json; align: left; width: 9; color: #000; negate:false;
+value:
+sagflora
+;" position="1.066 1.48 -2.8" rotation="0 0 0" visible="false"
+animation__in="property: visible; from: false; to: true; dur: 2000; delay: 0; easing: easeOutQuad; autoplay: false"
+animation__turn="property: rotation; from: 0 0 0; to: 0 -43.151 0; dur: 1000; delay: 14000; autoplay: false"
+animation__fall="property: position; from: 1.066 1.48 -2.8; to: 1.066 -1.771 4.143; dur: 1000; delay: 14000; autoplay: false"></a-entity>
+<a-entity id="type18" class="full-text" text="font: GARABD3.TTF-msdf.json; align: left; width: 9; color: #000; negate:false;
+value:
+vippende, -
+;" position="2.904 1.48 -2.8" rotation="0 0 0" visible="false"
+animation__in="property: visible; from: false; to: true; dur: 2000; delay: 0; easing: easeOutQuad; autoplay: false"
+animation__turn="property: rotation; from: 0 0 0; to: 54.44 0 0; dur: 1000; delay: 14000; autoplay: false"
+animation__fall="property: position; from: 2.904 1.48 -2.8; to: 1.371 -1.866 0.936; dur: 1000; delay: 14000; autoplay: false"></a-entity>
+<a-entity id="type19" class="full-text" text="font: GARABD3.TTF-msdf.json; align: left; width: 9; color: #000; negate:false;
+value:
+babyøje
+;" position="1.066 0.88 -2.8" rotation="0 0 0" visible="false"
+animation__in="property: visible; from: false; to: true; dur: 2000; delay: 0; easing: easeOutQuad; autoplay: false"
+animation__turn="property: rotation; from: 0 0 0; to: 0 0 25.191; dur: 1000; delay: 14000; autoplay: false"
+animation__fall="property: position; from: 1.066 0.88 -2.8; to: 1.066 -0.146 -0.181; dur: 1000; delay: 14000; autoplay: false"></a-entity>
+<a-entity id="type20" class="full-text" text="font: GARABD3.TTF-msdf.json; align: left; width: 9; color: #000; negate:false;
+value:
+babyøje se!
+;" position="2.903 0.68 -2.8" rotation="0 0 0" visible="false"
+animation__in="property: visible; from: false; to: true; dur: 2000; delay: 0; easing: easeOutQuad; autoplay: false"
+animation__turn="property: rotation; from: 0 0 0; to: 11.901 -53.789 0; dur: 1000; delay: 14000; autoplay: false"
+animation__fall="property: position; from: 2.903 0.68 -2.8; to: 0.654 -1.778 2.579; dur: 1000; delay: 14000; autoplay: false"></a-entity>
+</a-entity>
+
+
+        <a-obj-model material="" src="#2-obj" position="-2.38 0 2.173" scale="0.01 0.01 0.01" rotation="0 0 0" color="#000000" mtl="#2-mtl" obj-model=""></a-obj-model>
+        <a-obj-model material="" src="#2-obj" position="2.38 0 4.665" scale="0.01 0.01 0.01" rotation="0 180 0" color="#000000" mtl="#2-mtl" obj-model=""></a-obj-model>
+
+        <a-obj-model material="" src="#spejl-obj" position="2.963 0.41 -0.794" scale="0.015 0.015 0.015" rotation="0 0 0" color="#000000" mtl="#spejl-mtl" obj-model=""></a-obj-model>
+        <a-obj-model material="" src="#spejl2-obj" position="1.468 0.02 -0.822" scale="0.015 0.015 0.015" rotation="0 0 0" color="#000000" mtl="#spejl2-mtl" obj-model=""></a-obj-model>
+
+        <a-image src="#tree1" width="7.5" height="7.5" position="-2.978 3.55 -0.035"></a-image>
+        <a-image src="#tree2" width="7.5" height="7.5" position="2.397 3.533 -0.035"></a-image>
+
+        <a-plane material="src:#skrach; repeat: 5 5" height="10" width="10" rotation="-90 0 0" position="0 0 0"></a-plane>
+
+         <a-entity id='on1' class='link' mixin='typeButton' position='-1.12 0.15 4.141' material='color: #9B0000' data-clickable cursor-animator></a-entity>
+        <a-entity id='off1' class='link' geometry='primitive:plane; height:0.2; width:0.2' rotation='0 0 -90' scale='0 0' position='-1.15 0.15 4.141' material='color: #9B0000' visible="false" data-clickable></a-entity>
+
+
+       <a-light type="ambient" color="#d6d6d6"></a-light>
+       <a-light position="5.2 11.82 17.84" type="directional" intensity="1.4" light="intensity: 1.06; castShadow: true"></a-light>
+
+
+
+<!-- Camera and Cursor -->
+
+     <a-entity cursor="rayOrigin: mouse; fuse: false;"
+                raycaster="objects: [data-clickable];"></a-entity>
+
+        <a-camera look-controls="" wasd-controls="" position="0 1 5.4" rotation="0 0 0" data-aframe-inspector-original-camera="">
+        </a-camera>
+
+    </a-scene>
+  </body>
+</html>
