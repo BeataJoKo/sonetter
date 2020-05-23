@@ -1,0 +1,44 @@
+newmtl Spejling Front Inflation Material
+Ka 0.000000 0.000000 0.000000
+Kd 0.980392 0.980392 0.980392
+Ks 0.872392 0.872392 0.872392
+Ns 458.252899
+d 0.020000
+Tr 0.980000
+map_Kd Capsule - Diffuse.psd 
+adobe_map_Sphere_Environment Capsule - Environment.psd 
+
+newmtl Spejling Front Bevel Material
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.200000 0.200000 0.200000
+Ns 6.062867
+d 1.000000
+Tr 0.000000
+
+newmtl Spejling Extrusion Material
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.200000 0.200000 0.200000
+Ns 6.062867
+d 1.000000
+Tr 0.000000
+
+newmtl Spejling Back Bevel Material
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.200000 0.200000 0.200000
+Ns 6.062867
+d 1.000000
+Tr 0.000000
+
+newmtl Spejling Back Inflation Material
+Ka 0.000000 0.000000 0.000000
+Kd 0.980392 0.980392 0.980392
+Ks 0.872392 0.872392 0.872392
+Ns 458.252899
+d 0.020000
+Tr 0.980000
+map_Kd Capsule - Diffuse 2.psd 
+adobe_map_Sphere_Environment Capsule - Environment 3.psd 
+

@@ -1,0 +1,44 @@
+newmtl Digte Front Inflation Material
+Ka 0.000000 0.000000 0.000000
+Kd 0.980392 0.980392 0.980392
+Ks 0.872392 0.872392 0.872392
+Ns 458.252899
+d 0.020000
+Tr 0.980000
+map_Kd Capsule - Diffuse 20000.psd 
+adobe_map_Sphere_Environment Capsule - Environment0000.psd 
+
+newmtl Digte Front Bevel Material
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.200000 0.200000 0.200000
+Ns 6.062867
+d 1.000000
+Tr 0.000000
+
+newmtl Digte Extrusion Material
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.200000 0.200000 0.200000
+Ns 6.062867
+d 1.000000
+Tr 0.000000
+
+newmtl Digte Back Bevel Material
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.200000 0.200000 0.200000
+Ns 6.062867
+d 1.000000
+Tr 0.000000
+
+newmtl Digte Back Inflation Material
+Ka 0.000000 0.000000 0.000000
+Kd 0.980392 0.980392 0.980392
+Ks 0.872392 0.872392 0.872392
+Ns 458.252899
+d 0.020000
+Tr 0.980000
+map_Kd Capsule - Diffuse0000.psd 
+adobe_map_Sphere_Environment Capsule - Environment0000.psd 
+
