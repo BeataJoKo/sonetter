@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya:400,400i,500,500i|Roboto:100,300,400,500,700,900');
+
+*{
+    box-sizing: border-box;
+    font-family: "Roboto";
+    margin: 0;
+    padding: 0;
+}
+
+body{
+ background-color: #33294B;
+ color: #f2f2f2;
+}
+
+p{
+    font-family: "Alegreya";
+    font-size: 1.1em;
+    line-height: 1.4em;
+    padding-bottom: 2em;
+}
+
+.hidden{
+    display: none;
+}
+
+.active{
+    color: #4A2C5F;
+}
+
+/*------------header----------------*/
+
+header{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    background-color: #33294B;
+    display: grid;
+    grid-template-columns: .5fr 1fr .5fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "area1 area3 area2";
+}
+
+.logo{
+    grid-area: area1;
+    margin: .8em 0em 0em 1em;
+    max-width: 20%;
+    height: auto;
+}
+
+.burger{
+    grid-area: area2;
+    position: fixed;
+    right: 1.5em;
+    top: .9em;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 40px;
+  height: 4px;
+  background-color: #f2f2f2;
+  margin: 10px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+nav{
+    grid-area: area3;
+    display: none;
+    max-height: 400px;
+    font-size: 1.4em;
+    overflow: hidden;
+    justify-content: space-around;
+}
+
+nav a{
+   display: block;
+   margin: 1em 0em 1em 0em;
+   color: #f2f2f2;
+   text-align: center;
+   text-decoration: none;
+ }
+
+/*------------vr book----------------*/
+
+main{
+    padding-top: 5em;
+    padding-bottom: 6em;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "area1"
+    "area2"
+    "area3"
+    "area4";
+}
+
+article{
+    background-color: #33294B;
+    color: #f2f2f2;
+    transition: 0.3s all;
+}
+
+.changeColor {
+   background: #f2f2f2;
+   color: black;
+
+}
+
+.videoWrapper{
+    grid-area: area1;
+}
+
+#VR{
+   grid-area: area2;
+}
+
+#contact{
+grid-area: area3;
+display: grid;
+grid-template-columns: auto auto auto;
+grid-template-rows: auto auto auto auto auto auto;
+}
+
+#about{
+    grid-area: area4;
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0px;
+    z-index: 1;
+    text-align: left;
+    background-color: #33294B;
+    font-size: 0.9em;
+    padding: 0em 1em;
+    display: grid;
+    grid-template-columns: .5fr .5fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "area1 area2";
+}
+
+footer p{
+    margin: 1em 0 0 0;
+    grid-area: area1;
+}
+
+footer p:nth-of-type(2){
+    padding-top: 1.5em;
+}
+
+footer a{
+    text-align: right;
+    grid-area: area2;
+}
+
+h1, h2, h3, p{
+    margin: 5%;
+}
+
+h2:nth-of-type(1) {
+  text-align: center;
+  line-height: 150%;
+  margin: 3em auto;
+}
+
+h2:nth-of-type(2) {
+  text-align: right;
+}
+
+h1{
+  text-align: center;
+  margin: 3em auto;
+}
+
+iframe{
+   width: 90%;
+   height: 12em;
+   margin: 5%;
+   border: 2px solid #000000;
+}
+
+button {
+    background-color: #f2f2f2;
+    border: 2px solid #33294B;
+    padding: 1em;
+    width: 170px;
+    height: 55px;
+    font-size: .9em;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 4em;
+    align-items: center;
+    }
+
+button:nth-of-type(1) {
+    grid-area: 3 / 2;
+}
+
+button:nth-of-type(2) {
+    grid-area: 6 / 2;
+}
+
+/*------------contact----------------*/
+
+#contact p:nth-of-type(1){
+  text-align: right;
+  grid-area: 2 / 1 / span 1 / span 3;
+}
+
+#contact h3:nth-of-type(1){
+  grid-area: 1 / 1 / span 1 / span 3;
+}
+
+#contact p:nth-of-type(2){
+  text-align: right;
+  grid-area: 5 / 1 / span 1 / span 3;
+}
+
+#contact h3:nth-of-type(2){
+  grid-area: 4 / 1 / span 1 / span 3;
+}
+
+form{
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 1.1em;
+     grid-area: 6 / 1/ span 1 / span 3;
+}
+
+form label{
+    margin: .5em;
+}
+
+input,
+textarea{
+    margin-bottom: 2em;
+    margin-top: .5em;
+    width: 100%;
+    padding: 12px;
+    background-color: #F2F2F2;
+}
+
+input:focus,
+textarea:focus{
+    border: 1px solid #90789e;
+}
+
+.button{
+    background-color: #33294B;
+    color: #f2f2f2;
+    border: 2px solid #F2F2F2;
+    padding: 1em;
+    width: 170px;
+    height: 55px;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 25%;
+}
+
+/*------------about----------------*/
+
+
+
+/*------------DESKTOP----------------*/
+
+@media all and (min-width:560px) {
+  .button{
+    margin-left: 35%;
+}
+}
+@media all and (min-width:820px) {
+
+
+header{
+    display: grid;
+    grid-template-columns: .20fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "area1 area3";
+}
+
+.logo{
+    position: fixed;
+    max-width: 25%;
+    margin: .6em 0em 0em .6em;
+}
+
+.burger{
+    display: none;
+}
+
+nav{
+    grid-area: area3;
+    display: inline-flex;
+    max-height: 400px;
+    font-size: 1.6em;
+    overflow: hidden;
+}
+
+nav a{
+   display: inline;
+   margin: 1em;
+   text-align: center;
+   text-decoration: none;
+ }
+
+nav a:hover{
+    color: #90789E;
+    }
+
+/*------------vr book----------------*/
+
+main{
+    padding-top: 10%;
+    padding-bottom: 15%;
+    display: grid;
+    grid-template-columns: .15fr 1fr .15fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    ". area1 ."
+    ". area2 ."
+    ". area3 ."
+    ". area4 .";
+}
+
+.videoWrapper{
+    grid-area: 1 / 1 / 1 / span3;
+}
+
+iframe{
+   height: 20em;
+}
+
+iframe:nth-of-type(4){
+   height: 20em;
+   width: 45%;
+   margin: 0 0 0 4%;
+    }
+
+iframe:nth-of-type(5){
+   height: 20em;
+   width: 45%;
+   margin: 0 4% 0 0;
+    }
+
+button{
+    background-color: #33294B;
+    color: #f2f2f2;
+    border: 2px solid #F2F2F2;
+    }
+
+button:hover{
+    background-color: #4a2c5f;
+    }
+
+
+
+}
+

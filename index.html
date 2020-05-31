@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>VR Book design by Be Button</title>
+</head>
+
+
+<body>
+     <header>
+            <div class="logo">
+                <a href="index.html">  <img src="assets/logo_extra_simple_cream.png" alt="logo"></a>
+            </div>
+
+            <div id="burger" class="burger" onclick="myFunction(this)">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+
+            <nav class="home">
+                <a href="#VR"> VR Book</a>
+                <a href="#contact"> Contact </a>
+                <a href="#about"> About </a>
+            </nav>
+     </header>
+
+
+<main data-aos="example-anim2">
+  <div class="videoWrapper">
+          <video width="100%" video="100%" style="width:100%, height:auto">
+            <source src="assets/video_v2_compleat.mp4"/>
+          </video>
+        </div>
+
+   <article id="VR">
+    <h2>Get freedom<br>of your writing<br>expression.</h2>
+    <iframe src="https://bebutton.dk/kea/sonetter/2.html" class="page"></iframe>
+    <iframe src="https://bebutton.dk/kea/sonetter/5.html" class="page"></iframe>
+    <h2>Never be restring by one form of a book.</h2>
+    <p>We transform books into a virtual immersive experience. There are no sharp borders between realities. We can provide you with modern printed book design and guide through all process of publication. But we can also publish your book as full VR Book.</p>
+    <iframe src="https://bebutton.dk/kea/sonetter/4.html" class="page"></iframe>
+    <h2>Unfold full potential of visual poetry.</h2>
+    <p>Literature genre that scars the others makes us exited. We are not afraid of an unstandardized form and provide creative solution that matches your imagination. Your book doesn’t need to wait decades to be printed in a proper form anymore. </p>
+    <h3>Choose the direction.</h3>
+    <p>Along the process we work in co-creative way. We don’t know the right answer, instead we explore field to find the answer. Therefore, along the way you will be always welcome in the creative process of production.</p>
+    <iframe src="https://bebutton.dk/kea/sonetter/1A.html" class="page"></iframe>
+    <iframe src="https://bebutton.dk/kea/sonetter/1B.html" class="page"></iframe>
+    <h1>And fall in love with the book once more.</h1>
+  </article>
+  <article id="contact">
+    <h3>Want to read more?</h3>
+    <p>We are very happy to share our book pages with you. If you get exited of what we do and what we can, don’t hesitate and sign up to our newsletter.</p>
+    <button> Sign up </button>
+    <h3>Wish to know more?</h3>
+    <p>We are looking forward to get in contact with you and have a nice conversation about your idea, challenges or just answer any of your questions.</p>
+    <button id="show" onclick="showFunction(this)"> Let's talk </button>
+       <form class="hidden" action="mail_me.php">
+            <label for="fname">Your name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="email">Your email</label>
+            <input type="text" id="lname" name="email" placeholder="Your email..">
+
+            <label for="subject">Your message</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Send" class="button">
+        </form>
+  </article>
+  <article id="about">
+    <h3>Be Button</h3>
+    <p>Is a multimedia design company specialized in immersive content production and VR Book publications. We believe that the true beauty is hidden in diversity. Therefore, we evince diversity and uniqueness of human beings through use of mixed reality. The word doesn’t need to be predictable, obvious and easy. Let’s take the difficult path together.</p>
+    <iframe src="https://bebutton.dk/kea/sonetter/3.html" class="page"></iframe>
+  </article>
+</main>
+
+    <footer>
+       <p>CVR 39375923 </p>
+       <p>multimeda design © Be Button </p>
+
+       <a href="https://www.linkedin.com/in/beatakornecka/">  <img src="assets/logo_extra_simple_cream.png" alt="LinkedIn"></a>
+
+    </footer>
+
+
+   <script src="nav.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+   <script src="scroll.js"></script>
+
+    </body>
+</html>
+
