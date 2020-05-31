@@ -282,11 +282,8 @@ textarea:focus{
     margin-left: 25%;
 }
 
-/*------------about----------------*/
 
-
-
-/*------------DESKTOP----------------*/
+/*------------TABLET----------------*/
 
 @media all and (min-width:560px) {
   .button{
@@ -378,7 +375,49 @@ button:hover{
     background-color: #4a2c5f;
     }
 
+footer{
+    text-align: left;
+    background-color: #33294B;
+    font-size: 0.9em;
+    padding: 0em 1em;
+    display: grid;
+    grid-template-columns: .5fr .5fr .5fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "area1 area3 area2";
+}
+
+
+footer p:nth-of-type(1){
+    padding-top: 1.5em;
+    text-align: center;
+    grid-area: area3;
+}
+}
+
+/*------------DESKTOP----------------*/
+
+@media all and (min-width:1200px) {
+  .button{
+    margin-left: 40%;
+}
+
+iframe:nth-of-type(4){
+   height: 20em;
+   width: 45%;
+   margin: 0 1% 0 4%;
+    }
+
+iframe:nth-of-type(5){
+   height: 20em;
+   width: 45%;
+   margin: 0 4% 0 0;
+    }
+}
+
+@media all and (min-width:1400px) {
 
 
 }
+
 
