@@ -12,6 +12,11 @@ body{
  color: #f2f2f2;
 }
 
+video{
+    width: 100%;
+    height: auto;
+}
+
 p{
     font-family: "Alegreya";
     font-size: 1.1em;
@@ -130,6 +135,8 @@ article{
 
 .videoWrapper{
     grid-area: area1;
+    height: 100%;
+    overflow: hidden;
 }
 
 #VR{
@@ -404,7 +411,19 @@ footer p:nth-of-type(1){
 /*------------DESKTOP----------------*/
 
 @media all and (min-width:1200px) {
-  .button{
+
+main{
+    display: grid;
+    grid-template-columns: .15fr 1fr .15fr;
+    grid-template-rows: .75fr auto auto auto;
+    grid-template-areas:
+    ". area1 ."
+    ". area2 ."
+    ". area3 ."
+    ". area4 .";
+}
+
+.button{
     margin-left: 40%;
 }
 
@@ -423,9 +442,22 @@ iframe:nth-of-type(5){
    width: 45%;
    margin: 0 4% 0 0;
     }
+
+.videoWrapper{
+    background-size: cover;
+    overflow: hidden;
 }
 
+video{
+    width: 100%;
+    position: relative;
+    top: -12%;
+}
+}
+
+
 @media all and (min-width:1400px) {
+
 main{
     padding-top: 5%;
     padding-bottom: 10%;
