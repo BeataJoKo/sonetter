@@ -213,8 +213,9 @@ iframe{
 }
 
 button {
-    background-color: #f2f2f2;
-    border: 2px solid #33294B;
+    background-color: #33294B;
+    border: 2px solid #f2f2f2;
+    color: #f2f2f2;
     padding: 1em;
     width: 170px;
     height: 55px;
@@ -376,12 +377,6 @@ iframe:nth-of-type(5){
    height: 20em;
    width: 45%;
    margin: 0 4% 0 0;
-    }
-
-button{
-    background-color: #33294B;
-    color: #f2f2f2;
-    border: 2px solid #F2F2F2;
     }
 
 button:hover{
