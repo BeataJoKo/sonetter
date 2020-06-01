@@ -6,6 +6,7 @@
     <meta name="description" content="VR Book; 4">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^5.1.2/dist/aframe-animation-component.min.js"></script>
     <script src="https://unpkg.com/aframe-sprite-particles-component@^0.5.0/aframe-sprite-particles-component.js"></script>
     <script src="page4.js"></script>
 
@@ -16,7 +17,7 @@
 
 <!-- ASSETS  -->
       <a-assets>
-        <audio id="Sune" src="assets/Indsigt2.mp3" autoplay="false"></audio>
+        <audio id="Sune" preload="auto" src="assets/Indsigt2.mp3" autoplay="false"></audio>
         <a-mixin id='typeButton' ground geometry='primitive:triangle; height:0.2; width:0.2' rotation='0 0 -90' scale='0.2 0.2'></a-mixin>
           <a-asset-item id="4-obj" src="assets/model4.obj"></a-asset-item>
           <a-asset-item id="4-mtl" src="assets/model4.mtl"></a-asset-item>
