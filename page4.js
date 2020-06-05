@@ -1,4 +1,4 @@
-AFRAME.registerComponent('play', {
+AFRAME.registerComponent('audiohandler', {
         init: function () {
  var theAudio = document.querySelector('#soundHolder');
  var Play = document.querySelector('#play');
@@ -15,7 +15,7 @@ AFRAME.registerComponent('play', {
         }
       });
 
-AFRAME.registerComponent('pause', {
+AFRAME.registerComponent('cursor-hold', {
         init: function () {
  var theAudio = document.querySelector('#soundHolder');
  var Pause = document.querySelector('#pause');
@@ -30,7 +30,7 @@ AFRAME.registerComponent('pause', {
               }
       });
 
-AFRAME.registerComponent('stop', {
+AFRAME.registerComponent('click-back', {
         init: function () {
  var theAudio = document.querySelector('#soundHolder');
  var Play = document.querySelector('#play');
