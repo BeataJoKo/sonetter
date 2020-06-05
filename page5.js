@@ -1,7 +1,5 @@
      AFRAME.registerComponent('click-change', {
-
         init: function () {
-
         var theVideo = document.querySelector('#greenscreenvideo');
         var On = document.querySelector('#swich-on');
         var Off = document.querySelector('#swich-off');
@@ -15,8 +13,15 @@
             document.getElementById("lamp").setAttribute('light', "intensity", "3.48");
             document.getElementById("scene").emit("background.color-start");
             document.getElementById("text").emit("text.color-start");
-            });
+              });
+        }
+      });
 
+AFRAME.registerComponent('click-back', {
+        init: function () {
+        var theVideo = document.querySelector('#greenscreenvideo');
+        var On = document.querySelector('#swich-on');
+        var Off = document.querySelector('#swich-off');
             Off.addEventListener( 'click', function () {
             theVideo.pause();
             theVideo.currentTime = 3;
@@ -29,8 +34,6 @@
             document.getElementById("scene").setAttribute("background", "color", "#ffffff");
             document.getElementById("text").emit("text.color-pause");
             document.getElementById("text").setAttribute("text", "color", "#000000");
-        });
-
+            });
         }
-
       });

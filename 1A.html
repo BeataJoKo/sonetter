@@ -3,10 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>VR Book by Be Button</title>
-    <meta name="description" content="VR Book; 1">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="webmanifest.json">
+    <meta name="description" content="Be Button nr.1: Navnløs, VR Book publication.">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-animation-component@^5.1.2/dist/aframe-animation-component.min.js"></script>
     <script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
     <script src="page1.js"></script>
 
@@ -237,7 +240,7 @@ række
         <a-plane src="#ground" height="10" width="10" rotation="-90 0 0" position="0 0 0"></a-plane>
 
          <a-entity id='on1' class='link' mixin='typeButton' position='-1.12 0.15 4.141' material='color: #9B0000' data-clickable cursor-animator></a-entity>
-        <a-entity id='off1' class='link' geometry='primitive:plane; height:0.2; width:0.2' rotation='0 0 -90' scale='0 0' position='-1.15 0.15 4.141' material='color: #9B0000' visible="false" data-clickable></a-entity>
+        <a-entity id='off1' class='link' geometry='primitive:plane; height:0.2; width:0.2' rotation='0 0 -90' scale='0 0' position='-1.15 0.15 4.141' material='color: #9B0000' visible="false" data-clickable cursor-hold></a-entity>
 
 
        <a-light type="ambient" color="#d6d6d6"></a-light>

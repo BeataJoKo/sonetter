@@ -3,10 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>VR Book by Be Button</title>
-    <meta name="description" content="VR Book; 5">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="webmanifest.json">
+    <meta name="description" content="Be Button nr.5: Navnløs eller: Den der stikker af, VR Book publication.">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-animation-component@^5.1.2/dist/aframe-animation-component.min.js"></script>
     <script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
     <script src="page5.js"></script>
 
@@ -20,7 +23,7 @@
 
 <!-- ASSETS  -->
       <a-assets>
-         <video id="greenscreenvideo" src="assets/full_skyA.mp4" autoplay="false" loop webkit-playsinline preload="auto"/>
+         <video id="greenscreenvideo" src="assets/full_skyA.mp4" loop webkit-playsinline playsinline preload="auto"/>
         <a-mixin id='typeButton' ground geometry='primitive:triangle; height:0.2; width:0.2' rotation='0 0 -90' scale='0.2 0.2'></a-mixin>
           <a-asset-item id="5-obj" src="assets/model5b.obj"></a-asset-item>
           <a-asset-item id="5-mtl" src="assets/model5b.mtl"></a-asset-item>
@@ -65,7 +68,7 @@ Livet er blåt,
 
         <a-obj-model material="" src="#5-obj" position="-1.45 0 2.7" scale="0.01 0.01 0.01" color="#000000" mtl="#5-mtl" obj-model=""></a-obj-model>
          <a-obj-model material="" src="#navn-obj" position="2.1 -0.125 2.84" scale="0.01 0.01 0.01" color="#000000" mtl="#navn-mtl" obj-model=""></a-obj-model>
-          <a-obj-model material="" src="#elle-obj" position="-0.36 -0.1 1.2" scale="0.0075 0.0075 0.0075" color="#000000" mtl="#elle-mtl" obj-model=""></a-obj-model>
+          <a-obj-model material="" src="#elle-obj" position="-0.36 -0.058 1.2" scale="0.0075 0.0075 0.0075" color="#000000" mtl="#elle-mtl" obj-model=""></a-obj-model>
        <a-obj-model material="" src="#den-obj" position="0.07 0.235 -0.19" scale="0.0075 0.0075 0.0075" color="#000000" mtl="#den-mtl" obj-model=""></a-obj-model>
         <a-obj-model material="" src="#der-obj" position="0.829 0.124 -0.383" scale="0.0075 0.0075 0.0075" color="#000000" mtl="#der-mtl" obj-model=""></a-obj-model>
       <a-obj-model material="" src="#stik-obj" position="2.939 0.651 0.21" scale="0.0075 0.0075 0.0075" color="#000000" mtl="#stik-mtl" obj-model=""></a-obj-model>
@@ -75,14 +78,14 @@ Livet er blåt,
         <a-plane color="#000000" height="10" width="10" material="opacity: 0.95; transparent: true; metalness: 1; roughness: 0" rotation="-90 180 0" position="0 0 0"></a-plane>
 
         <a-entity id='swich-on' class='link' mixin='typeButton' position='-0.935 0.15 4.141' material='color: #9B0000' data-clickable click-change></a-entity>
-        <a-entity id='swich-off' class='link' geometry='primitive:plane; height:0.2; width:0.2' rotation='0 0 -90' scale='0 0' position='-0.965 0.15 4.141' material='color: #9B0000' visible="false" data-clickable></a-entity>
+        <a-entity id='swich-off' class='link' geometry='primitive:plane; height:0.2; width:0.2' rotation='0 0 -90' scale='0 0' position='-0.965 0.15 4.141' material='color: #6D0000' visible="false" data-clickable click-back></a-entity>
 
        <a-light type="ambient" color="#d6d6d6"></a-light>
        <a-light position="5.2 11.82 17.84" type="directional" intensity="1.4" light="intensity: 1.06; castShadow: true"></a-light>
        <a-light id="lamp" type="point" color="#365985" position="-1.27 0.185 5.13" light="intensity: 0 castShadow: true" rotation=""></a-light>
 
 
-  <a-sky material="shader: chromakey; src: #greenscreenvideo; color: 0.1 0.9 0.2"></a-sky>
+  <a-videosphere material="shader: chromakey; src: #greenscreenvideo; color: 0.1 0.9 0.2"></a-videosphere>
 
 
 

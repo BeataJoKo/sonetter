@@ -1,7 +1,5 @@
 AFRAME.registerComponent('cursor-animator', {
-
 init: function () {
-
      var On = document.querySelector('#on1');
      var Off = document.querySelector('#off1');
 
@@ -74,8 +72,11 @@ init: function () {
          document.getElementById("type19").setAttribute('animation__fall', "autoplay", "true");
          document.getElementById("type20").setAttribute('animation__fall', "autoplay", "true");
           });
+        }
+      });
 
-
+AFRAME.registerComponent('cursor-hold', {
+        init: function () {
     Off.addEventListener( 'click', function () {
 
         });
