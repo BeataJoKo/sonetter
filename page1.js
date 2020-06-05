@@ -13,6 +13,7 @@ init: function () {
             theVideo.play();
             Video.play();
 
+
          document.getElementById("fly-0").setAttribute('animation__turn', "autoplay", "true");
          document.getElementById("fly-1").setAttribute('animation__turn', "autoplay", "true");
          document.getElementById("fly-2").setAttribute('animation__turn', "autoplay", "true");

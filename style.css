@@ -157,9 +157,7 @@ grid-template-rows: auto auto auto auto auto auto;
 footer{
     width: 100%;
     height: auto;
-    position: fixed;
     bottom: 0px;
-    z-index: -1;
     text-align: left;
     background-color: #33294B;
     font-size: 0.9em;
